@@ -1,13 +1,17 @@
 # About
 
-Windows Form WebView / WebBrowser... solutions
+Windows Form WebView/WebBrowser solutions: WebBrowser, AxWebBrowser(Internet Control), XamlIsland, WebkitBrowser, CefSharp...
 
 https://github.com/surfsky/WinFormWebViews/
 
 # Solutions
 
-- [WebBrowser control](./TestWebBrowser/readme.md)
-- [AxWebBrowser COM control (Internet Controls)](./TestInternetControl/readme.md)
-- [XAML Island + WebView](./TestXamlIsland/readme.md)
-- [WebkitBrowser](./TestWebkitBrowser/readme.md)
-- [CefSharp](./TestCefSharp/readme.md)
+- [WebBrowser control](./TestWebBrowser/)
+- [AxWebBrowser COM control (Internet Controls)](./TestInternetControl/)
+- [XAML Island + WebView](./TestXamlIsland/)
+- [WebkitBrowser](./TestWebkitBrowser/)
+- [CefSharp](./TestCefSharp/)
+
+# Snap
+
+[](./TestCEFSharp/Doc/demo.png)
