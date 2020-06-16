@@ -23,8 +23,8 @@ namespace WebkitExplorer
         private void FormMain_Load(object sender, EventArgs e)
         {
             tbHtml.Document.HighlightingStrategy = HighlightingStrategyFactory.CreateHighlightingStrategy("XML");
-            this.tbUrl.Text = "http://baidu.com";
-            this.webKitBrowser.DocumentText = "<h1>Hello WebkitBrowser</h1>";
+            //this.tbUrl.Text = "http://baidu.com";
+            //this.webKitBrowser.DocumentText = "<h1>Hello WebkitBrowser</h1>";
         }
 
         //---------------------------------------------

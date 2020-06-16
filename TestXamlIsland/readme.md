@@ -32,3 +32,10 @@ https://github.com/surfsky/WebViewSolutions/TestXamlIsland
 3. Run
 
     ![](./Doc/snap.png)
+
+
+4. Remark
+
+- Xaml Island 的引入，让 windows form 有更多的可能性。
+- 结合 winform 的便捷性和 Xaml 的灵活性。
+- Xaml WebView 有点问题，不知道怎么展示本地的网页。

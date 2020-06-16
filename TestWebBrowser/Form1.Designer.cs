@@ -34,6 +34,7 @@
             this.btnGo = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnLoadHtml = new System.Windows.Forms.ToolStripButton();
+            this.btnLoadHtml2 = new System.Windows.Forms.ToolStripButton();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblUrl = new System.Windows.Forms.ToolStripStatusLabel();
@@ -42,7 +43,6 @@
             this.webBrowser = new System.Windows.Forms.WebBrowser();
             this.tbHtml = new System.Windows.Forms.RichTextBox();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.btnLoadHtml2 = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -70,7 +70,7 @@
             this.tbUrl.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
             this.tbUrl.Name = "tbUrl";
             this.tbUrl.Size = new System.Drawing.Size(500, 25);
-            this.tbUrl.Text = "http://baidu.com";
+            this.tbUrl.Text = "https://lbs.qq.com/webDemoCenter/javascriptV2/mapOperate/createMap";
             // 
             // btnGo
             // 
@@ -93,6 +93,14 @@
             this.btnLoadHtml.Text = "LoadHtml";
             this.btnLoadHtml.Click += new System.EventHandler(this.btnLoadHtml_Click);
             // 
+            // btnLoadHtml2
+            // 
+            this.btnLoadHtml2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnLoadHtml2.Name = "btnLoadHtml2";
+            this.btnLoadHtml2.Size = new System.Drawing.Size(75, 22);
+            this.btnLoadHtml2.Text = "LoadHtml2";
+            this.btnLoadHtml2.Click += new System.EventHandler(this.btnLoadHtml2_Click);
+            // 
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -105,9 +113,9 @@
             this.statusStrip1.TabIndex = 3;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // lblInfo
+            // lblStatus
             // 
-            this.lblStatus.Name = "lblInfo";
+            this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(29, 17);
             this.lblStatus.Text = "STS";
             // 
@@ -163,14 +171,6 @@
             // 
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(23, 20);
-            // 
-            // btnLoadHtml2
-            // 
-            this.btnLoadHtml2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnLoadHtml2.Name = "btnLoadHtml2";
-            this.btnLoadHtml2.Size = new System.Drawing.Size(75, 22);
-            this.btnLoadHtml2.Text = "LoadHtml2";
-            this.btnLoadHtml2.Click += new System.EventHandler(this.btnLoadHtml2_Click);
             // 
             // Form1
             // 

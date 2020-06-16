@@ -21,7 +21,7 @@ https://github.com/surfsky/WinFormWebViews/TestWebkitBrowser
 
 # Remark
 
-功能不完善，也慢.
-建议迁移到 CefSharp.
-腾讯地图无法展示
+- 功能不完善，也慢.
+- 腾讯地图无法展示.
+- 建议迁移到 CefSharp.
 

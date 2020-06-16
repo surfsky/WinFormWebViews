@@ -36,12 +36,12 @@
             this.btnGo = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnShowHtml = new System.Windows.Forms.ToolStripButton();
+            this.btnLoadHtml2 = new System.Windows.Forms.ToolStripButton();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblInfo = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblUrl = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblTitle = new System.Windows.Forms.ToolStripStatusLabel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.btnLoadHtml2 = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -95,6 +95,7 @@
             this.tbUrl.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
             this.tbUrl.Name = "tbUrl";
             this.tbUrl.Size = new System.Drawing.Size(500, 25);
+            this.tbUrl.Text = "https://lbs.qq.com/webDemoCenter/javascriptV2/mapOperate/createMap";
             // 
             // btnGo
             // 
@@ -118,6 +119,15 @@
             this.btnShowHtml.Size = new System.Drawing.Size(84, 22);
             this.btnShowHtml.Text = "LoadHtml";
             this.btnShowHtml.Click += new System.EventHandler(this.btnShowHtml_Click);
+            // 
+            // btnLoadHtml2
+            // 
+            this.btnLoadHtml2.Image = global::WebkitExplorer.Properties.Resources.application_lightning;
+            this.btnLoadHtml2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnLoadHtml2.Name = "btnLoadHtml2";
+            this.btnLoadHtml2.Size = new System.Drawing.Size(91, 22);
+            this.btnLoadHtml2.Text = "LoadHtml2";
+            this.btnLoadHtml2.Click += new System.EventHandler(this.btnLoadHtml2_Click);
             // 
             // statusStrip1
             // 
@@ -151,6 +161,9 @@
             // 
             // splitContainer1
             // 
+            this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.splitContainer1.Location = new System.Drawing.Point(0, 28);
             this.splitContainer1.Name = "splitContainer1";
             // 
@@ -164,15 +177,6 @@
             this.splitContainer1.Size = new System.Drawing.Size(936, 588);
             this.splitContainer1.SplitterDistance = 590;
             this.splitContainer1.TabIndex = 3;
-            // 
-            // btnLoadHtml2
-            // 
-            this.btnLoadHtml2.Image = global::WebkitExplorer.Properties.Resources.application_lightning;
-            this.btnLoadHtml2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnLoadHtml2.Name = "btnLoadHtml2";
-            this.btnLoadHtml2.Size = new System.Drawing.Size(91, 22);
-            this.btnLoadHtml2.Text = "LoadHtml2";
-            this.btnLoadHtml2.Click += new System.EventHandler(this.btnLoadHtml2_Click);
             // 
             // FormMain
             // 

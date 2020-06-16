@@ -42,8 +42,11 @@ namespace TestXAMLLand
             var html = this.tbHtml.Text;
             var path = string.Format("{0}\\tmp.html", Environment.CurrentDirectory);
             CreateFile(path, html);
-            this.webView.Navigate(path);  // System.Exception:“已中止操作 (异常来自 HRESULT:0x80004004 (E_ABORT))”
 
+            path = @"file:///" + path.Replace(@"\", @"/");  // 转化为webview支持的地址（如 file:///c:/html/file.htm）
+            //path = @"ms-appdata:///" + path.Replace(@"\", @"/");   // 应用文件夹
+            //path = @"ms-appx-web:///" + path.Replace(@"\", @"/");  // 应用包内文件
+            this.webView.Navigate(new Uri(path));  // System.Exception:“已中止操作 (异常来自 HRESULT:0x80004004 (E_ABORT))”
         }
 
         public static void CreateFile(string filePath, string data)

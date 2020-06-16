@@ -111,6 +111,7 @@
             this.tbUrl.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
             this.tbUrl.Name = "tbUrl";
             this.tbUrl.Size = new System.Drawing.Size(500, 25);
+            this.tbUrl.Text = "https://lbs.qq.com/webDemoCenter/javascriptV2/mapOperate/createMap";
             this.tbUrl.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tbUrl_KeyUp);
             // 
             // btnGo
