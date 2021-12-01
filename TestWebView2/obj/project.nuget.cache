@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "sJCVEB7c1UyqeL7T/S8NfZLJxojqHFDsZsvntFUin2yo6AnE7zgxPWorSjEaV1dsgtlj+nc51YuirOyRgpp0xA==",
+  "success": true,
+  "projectFilePath": "\\\\Mac\\Home\\Downloads\\Dev\\2021\\200602-MapCutter\\WinFormWebViews-github\\TestWebView2\\TestWebView2.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\CJH\\.nuget\\packages\\microsoft.web.webview2\\1.0.1020.30\\microsoft.web.webview2.1.0.1020.30.nupkg.sha512"
+  ],
+  "logs": []
+}

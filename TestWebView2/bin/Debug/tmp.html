@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <title>地图显示</title>
+    <style>
+        html, body, #container {
+            width: 100%;
+            height: 100%;
+            background-color: green;
+        }
+    </style>
+    <script src="https://webapi.amap.com/maps?v=1.4.15&key=8f1b4bfa36143143452768fafbf3b8bd"></script>
+</head>
+<body>
+    <div id="container"></div>
+</body>
+</html>
+
+<script>
+    var map = new AMap.Map('container', {
+        resizeEnable: true, //是否监控地图容器尺寸变化
+        zoom:11, //初始化地图层级
+        center: [116.397428, 39.90923] //初始化地图中心点
+    });
+</script>

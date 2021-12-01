@@ -24,7 +24,7 @@ CefSharp is a CEF dotnet wrapper. See:
 # Basic steps to use CefSharp browser control
 
 1. Create windows form project with netframework over **4.5.2**.
-2. install CefSharp with nuget.
+2. install CefSharp.WinForms with nuget.
 
     ![](./Doc/nuget.png)
 
@@ -73,3 +73,30 @@ CefSharp is a CEF dotnet wrapper. See:
     ![](./Doc/04.png)
 
 
+```csharp
+
+call js 
+
+    c#
+        browser.ExecuteScriptAsync("document.body.style.background = 'red';");
+        browser.ExecuteJavaScriptAsync("(function(){ document.getElementsByName('q')[0].value = 'CefSharp Was Here!'; document.getElementsByName('btnK')[0].click(); })();");
+        JavascriptResponse response = await browser.EvaluateScriptAsync(script);
+        browser.GetBrowser().GetFrame("SubFrame").ExecuteJavaScriptAsync("document.body.style.background = 'red';");
+
+
+call host
+
+    js
+        CefSharp.PostMessage(window.getSelection().toString());
+
+    c#
+        private void OnBrowserJavascriptMessageReceived(object sender, JavascriptMessageReceivedEventArgs e)
+        {
+	        var windowSelection = (string)e.Message;
+	        //DO SOMETHING WITH THIS MESSAGE
+	        //This event is called on the threads pool, to access your UI thread
+                //You can cast sender to ChromiumWebBrowser
+	        //use Control.BeginInvoke/Dispatcher.BeginInvoke
+        }
+
+```

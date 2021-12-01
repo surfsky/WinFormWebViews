@@ -37,8 +37,25 @@ namespace TestCEFSharp
             browser.LoadingStateChanged += Browser_LoadingStateChanged;
             browser.AddressChanged += Browser_AddressChanged;
             browser.FrameLoadEnd += Browser_FrameLoadEnd;
+            browser.JavascriptMessageReceived += Browser_JavascriptMessageReceived;
             this.splitContainer.Panel1.Controls.Add(browser);
         }
+
+        /// <summary>接收到网页发来的消息</summary>
+        private void Browser_JavascriptMessageReceived(object sender, JavascriptMessageReceivedEventArgs e)
+        {
+            Invoke(() =>
+            {
+                this.tbMessage.Text += e.Message.ToString() + "\r\n";
+            });
+        }
+
+        // 调用 js 方法
+        private void btnCallScript_Click(object sender, EventArgs e)
+        {
+            browser.ExecuteScriptAsync("show('hello world')");
+        }
+
 
         private void Browser_FrameLoadEnd(object sender, FrameLoadEndEventArgs e)
         {
@@ -49,7 +66,7 @@ namespace TestCEFSharp
                 {
                     Invoke(() =>
                     {
-                        this.tbHtml.Text = t.Result;
+                        //this.tbHtml.Text = t.Result;
                     });
                 }
             });
@@ -72,7 +89,7 @@ namespace TestCEFSharp
                 this.btnForward.Enabled = e.CanGoForward;
                 if (!e.IsLoading)
                 {
-                    this.tbHtml.Text = browser.GetTextAsync().Result;
+                    //this.tbHtml.Text = browser.GetTextAsync().Result;
                 }
             });
         }
@@ -129,5 +146,6 @@ namespace TestCEFSharp
         {
             browser.LoadHtml(this.tbHtml.Text, "http://www.example.com/");
         }
+
     }
 }

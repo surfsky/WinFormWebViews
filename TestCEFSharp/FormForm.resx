@@ -128,31 +128,89 @@
 &lt;html&gt;
 &lt;head&gt;
     &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" /&gt;
-    &lt;style type="text/css"&gt;
-        html, body { width: 100%; height: 100%; }
-        #container { width: 100%; height: 100%; }
-        * { margin: 0px; padding: 0px; }
+    &lt;meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width"&gt;
+    &lt;title&gt;高德地图&lt;/title&gt;
+    &lt;style&gt;
+        html, body, #container {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
     &lt;/style&gt;
-    &lt;script src="https://map.qq.com/api/js?v=2.exp&amp;key=OB4BZ-D4W3U-B7VVO-4PJWW-6TKDJ-WPB77"&gt;&lt;/script&gt;
+    &lt;script src="https://webapi.amap.com/maps?v=1.4.15&amp;key=8f1b4bfa36143143452768fafbf3b8bd&amp;plugin=AMap.Scale,AMap.OverView,AMap.ToolBar,AMap.Geocoder,AMap.MapType"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
     &lt;div id="container"&gt;&lt;/div&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 &lt;script&gt;
-    var center = new qq.maps.LatLng(39.982163, 116.306070);
-    var map = new qq.maps.Map(document.getElementById("container"), {
-        center: center,
-        zoom: 16
+    var center = new AMap.LngLat(116.396955410003, 39.9180971495937);
+    var tl = new AMap.LngLat(116.391412494659, 39.9234773919693);
+    var tr = new AMap.LngLat(116.402498325348, 39.9234773919693);
+    var br = new AMap.LngLat(116.402498325348, 39.9127169072181);
+    var bl = new AMap.LngLat(116.391412494659, 39.9127169072181);
+    var map = new AMap.Map('container', {
+        resizeEnable: true,
+        zoom: 14,
+        center: center
     });
-    var marker = new qq.maps.Marker({
-        position: center,
-        animation: qq.maps.MarkerAnimation.DROP,
-        map: map
+    map.addControl(new AMap.Scale());
+    map.addControl(new AMap.ToolBar());
+    map.addControl(new AMap.OverView());
+    map.addControl(new AMap.MapType());
+    var ground = new AMap.ImageLayer({
+        map: map,
+        url: 'https://itemcdn.zcycdn.com/1000529298/ed41b9a9-b1a3-426d-b1d9-297512b453ec.jpg?x-oss-process=image/resize,m_fixed,w_408/quality,Q_80',
+        bounds: new AMap.Bounds(bl, tr),
+        opacity: 0.5,
+        zIndex: 999
     });
-&lt;/script&gt;
-</value>
+    var marker1 = new AMap.Marker({ position: tl, draggable: true });
+    var marker2 = new AMap.Marker({ position: br, draggable: true });
+    marker1.on('dragging', function (e) { setRect(); });
+    marker2.on('dragging', function (e) { setRect(); });
+    map.add(marker1);
+    map.add(marker2);
+    var rect = new AMap.Polyline({ path: [tl, tr, br, bl], fillOpacity: 0.2, strokeColor: "blue" });
+    map.add(rect);
+    setRect();
+    function setRect() {
+        var tl = marker1.getPosition();
+        var br = marker2.getPosition();
+        var bl = new AMap.LngLat(tl.getLng(), br.getLat());
+        var tr = new AMap.LngLat(br.getLng(), tl.getLat());
+        rect.setPath([tl, tr, br, bl, tl]);
+        ground.setBounds(new AMap.Bounds(bl, tr));
+        setLabel(marker1);
+        setLabel(marker2);
+        showLngLat(tl.getLng(), tl.getLat(), br.getLng(), br.getLat());
+    }
+    function setLabel(marker) {
+        var p = marker.getPosition();
+        var txt = p.getLng() + "," + p.getLat();
+        marker.setLabel({
+            offset: new AMap.Pixel(5, 0),
+            content: txt,
+            direction: 'right'
+        });
+    }
+
+
+    /*
+     * Exports
+     */
+    // 将坐标反馈给 webview
+    function showLngLat(lng1, lat1, lng2, lat2) {
+        var params = "" + lng1 + "," + lat1 + "," + lng2 + "," + lat2;
+        if (CefSharp != null)
+            CefSharp.PostMessage("ShowLngLat " + params);
+    }
+  // 公共方法供 Web 宿主调用
+  function show(msg) {
+      alert(msg);
+  }
+&lt;/script&gt;</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

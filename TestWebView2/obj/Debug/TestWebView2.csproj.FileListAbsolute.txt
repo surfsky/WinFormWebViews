@@ -1,0 +1,17 @@
+\\Mac\Home\Downloads\Dev\2021\200602-MapCutter\WinFormWebViews-github\TestWebView2\bin\Debug\runtimes\win-x86\native\WebView2Loader.dll
+\\Mac\Home\Downloads\Dev\2021\200602-MapCutter\WinFormWebViews-github\TestWebView2\bin\Debug\runtimes\win-x64\native\WebView2Loader.dll
+\\Mac\Home\Downloads\Dev\2021\200602-MapCutter\WinFormWebViews-github\TestWebView2\bin\Debug\runtimes\win-arm64\native\WebView2Loader.dll
+\\Mac\Home\Downloads\Dev\2021\200602-MapCutter\WinFormWebViews-github\TestWebView2\bin\Debug\TestWebBrowser.exe.config
+\\Mac\Home\Downloads\Dev\2021\200602-MapCutter\WinFormWebViews-github\TestWebView2\bin\Debug\TestWebBrowser.exe
+\\Mac\Home\Downloads\Dev\2021\200602-MapCutter\WinFormWebViews-github\TestWebView2\bin\Debug\TestWebBrowser.pdb
+\\Mac\Home\Downloads\Dev\2021\200602-MapCutter\WinFormWebViews-github\TestWebView2\bin\Debug\Microsoft.Web.WebView2.Core.dll
+\\Mac\Home\Downloads\Dev\2021\200602-MapCutter\WinFormWebViews-github\TestWebView2\bin\Debug\Microsoft.Web.WebView2.WinForms.dll
+\\Mac\Home\Downloads\Dev\2021\200602-MapCutter\WinFormWebViews-github\TestWebView2\bin\Debug\Microsoft.Web.WebView2.Wpf.dll
+\\Mac\Home\Downloads\Dev\2021\200602-MapCutter\WinFormWebViews-github\TestWebView2\obj\Debug\TestWebView2.csproj.AssemblyReference.cache
+\\Mac\Home\Downloads\Dev\2021\200602-MapCutter\WinFormWebViews-github\TestWebView2\obj\Debug\TestWebView.Form1.resources
+\\Mac\Home\Downloads\Dev\2021\200602-MapCutter\WinFormWebViews-github\TestWebView2\obj\Debug\TestWebBrowser.Properties.Resources.resources
+\\Mac\Home\Downloads\Dev\2021\200602-MapCutter\WinFormWebViews-github\TestWebView2\obj\Debug\TestWebView2.csproj.GenerateResource.cache
+\\Mac\Home\Downloads\Dev\2021\200602-MapCutter\WinFormWebViews-github\TestWebView2\obj\Debug\TestWebView2.csproj.CoreCompileInputs.cache
+\\Mac\Home\Downloads\Dev\2021\200602-MapCutter\WinFormWebViews-github\TestWebView2\obj\Debug\TestWebView2.csproj.CopyComplete
+\\Mac\Home\Downloads\Dev\2021\200602-MapCutter\WinFormWebViews-github\TestWebView2\obj\Debug\TestWebBrowser.exe
+\\Mac\Home\Downloads\Dev\2021\200602-MapCutter\WinFormWebViews-github\TestWebView2\obj\Debug\TestWebBrowser.pdb

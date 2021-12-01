@@ -42,11 +42,19 @@
             this.btnLoadHtml = new System.Windows.Forms.ToolStripButton();
             this.splitContainer = new System.Windows.Forms.SplitContainer();
             this.tbHtml = new ICSharpCode.TextEditor.TextEditorControl();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tbMessage = new System.Windows.Forms.TextBox();
+            this.btnCallScript = new System.Windows.Forms.ToolStripButton();
             this.statusStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).BeginInit();
             this.splitContainer.Panel2.SuspendLayout();
             this.splitContainer.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -81,7 +89,8 @@
             this.btnGo,
             this.toolStripSeparator1,
             this.btnDebug,
-            this.btnLoadHtml});
+            this.btnLoadHtml,
+            this.btnCallScript});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1217, 25);
@@ -154,7 +163,7 @@
             // 
             // splitContainer.Panel2
             // 
-            this.splitContainer.Panel2.Controls.Add(this.tbHtml);
+            this.splitContainer.Panel2.Controls.Add(this.tabControl1);
             this.splitContainer.Size = new System.Drawing.Size(1217, 626);
             this.splitContainer.SplitterDistance = 772;
             this.splitContainer.TabIndex = 2;
@@ -163,11 +172,63 @@
             // 
             this.tbHtml.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tbHtml.IsReadOnly = false;
-            this.tbHtml.Location = new System.Drawing.Point(0, 0);
+            this.tbHtml.Location = new System.Drawing.Point(3, 3);
             this.tbHtml.Name = "tbHtml";
-            this.tbHtml.Size = new System.Drawing.Size(441, 626);
+            this.tbHtml.Size = new System.Drawing.Size(427, 594);
             this.tbHtml.TabIndex = 0;
             this.tbHtml.Text = resources.GetString("tbHtml.Text");
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(441, 626);
+            this.tabControl1.TabIndex = 1;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.tbHtml);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(433, 600);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "HTML";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.tbMessage);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(433, 600);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Message";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // tbMessage
+            // 
+            this.tbMessage.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbMessage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tbMessage.Location = new System.Drawing.Point(3, 3);
+            this.tbMessage.Multiline = true;
+            this.tbMessage.Name = "tbMessage";
+            this.tbMessage.Size = new System.Drawing.Size(427, 594);
+            this.tbMessage.TabIndex = 0;
+            // 
+            // btnCallScript
+            // 
+            this.btnCallScript.Image = global::TestCEFSharp.Properties.Resources.forward;
+            this.btnCallScript.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnCallScript.Name = "btnCallScript";
+            this.btnCallScript.Size = new System.Drawing.Size(82, 22);
+            this.btnCallScript.Text = "CallScript";
+            this.btnCallScript.Click += new System.EventHandler(this.btnCallScript_Click);
             // 
             // FormForm
             // 
@@ -188,6 +249,10 @@
             this.splitContainer.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).EndInit();
             this.splitContainer.ResumeLayout(false);
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -208,6 +273,11 @@
         private System.Windows.Forms.SplitContainer splitContainer;
         private ICSharpCode.TextEditor.TextEditorControl tbHtml;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripButton btnCallScript;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TextBox tbMessage;
     }
 }
 

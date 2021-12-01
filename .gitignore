@@ -4,3 +4,5 @@
 /TestWebBrowser/obj
 /TestWebkitBrowser/obj
 /TestXamlIsland/obj
+/TestWebView/obj
+TestCEFSharp/bin/Debug/bin/libcef.dll

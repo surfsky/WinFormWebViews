@@ -1,4 +1,4 @@
-﻿namespace TestWebBrowser
+﻿namespace TestWebView
 {
     partial class Form1
     {

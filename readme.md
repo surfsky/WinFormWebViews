@@ -9,6 +9,8 @@ Windows Form WebView/WebBrowser solutions:
 - [XAML Island + WebView](https://github.com/surfsky/WinFormWebViews/TestXamlIsland/)
 - [WebkitBrowser](https://github.com/surfsky/WinFormWebViews/TestWebkitBrowser/)
 - [CefSharp](https://github.com/surfsky/WinFormWebViews/TestCefSharp/)
+- [WebView](https://github.com/surfsky/WinFormWebViews/TestWebView/)
+- [WebView2](https://github.com/surfsky/WinFormWebViews/TestWebView2/)
 - ...
 
 
@@ -21,9 +23,12 @@ AxWebBrowser  | normal  | small  | ok             | fail                     | o
 XamlIsland    | fast    | small  | ok             | fail                     | fail     
 WebkitBrowser | slow    | normal | fail           | fail                     | fail       
 CefSharp      | veryfast| big    | ok             | ok                       | ok       
+WebView       | fast    | small  | ok             | fail                     | ok       
+WebView2      | fast    | small  | ok             | fail                     | ok       
 
 
 TencentMap: https://lbs.qq.com/webDemoCenter/javascriptV2/mapOperate/createMap
+GaodeMap: 
 
 # Snap
 

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TestWebBrowser.Properties
+namespace TestWebView.Properties
 {
 
 
